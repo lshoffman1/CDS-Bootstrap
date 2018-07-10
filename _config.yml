@@ -13,21 +13,38 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Bootstrap 4 Github Pages
-email: ""
-description: >- # this means to ignore newlines until "baseurl:"
-  A Bootstrap 4 start up project for Jekyll and Github Pages
-#baseurl: "" # the subpath of your site, e.g. /blog
-#url: "" # the base hostname & protocol for your site, e.g. http://example.com
-#twitter_username: jekyllrb
-#github_username:  jekyll
-
-repository: "nicolas-van/bootstrap-4-github-pages"
+title: Chicago Design System
+email: design-system@cityofchicago.org
+description: The Chicago Design System (CDS) is a guide to producing delightful services and technology applications for employees and residents of the City of Chicago.
+# >- this means to ignore newlines until "baseurl:" I didn't try this, though.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://chicagodesignsystem.org" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: ChiDesignDir
+github_username:  chicago
+repository: "Chicago/design-system"
+google_analytics: "UA-120815826-1"
 
 # Build settings
+markdown: kramdown
+theme: minima
+
 plugins:
   - jekyll-feed
-
+  
+collections_dir: pages
+collections:
+  guides:
+    output: true
+    permalink: /:collection/:path
+  identity:
+    output: true
+    permalink: /:collection/:path
+  new-additions:
+    output: true
+    permalink: /:collection/:path
+  getting-started:
+    output: true
+    permalink: /:collection/:path
 # A list of the pages to display in the navigation bar
 header_pages:
 
