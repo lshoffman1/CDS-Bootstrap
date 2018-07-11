@@ -30,7 +30,11 @@ theme: minima
 
 plugins:
   - jekyll-feed
+  - jekyll-paginate
   
+paginate: 5
+paginate_path: "/pages/blog/page:num/"
+
 collections_dir: pages
 collections:
   guides:
@@ -39,11 +43,11 @@ collections:
   identity:
     output: true
     permalink: /:collection/:path
-  new-additions:
-    output: true
-    permalink: /:collection/:path
   getting-started:
     output: true
+    permalink: /:collection/:path
+  downloadable-assets:
+    output: false
     permalink: /:collection/:path
 # A list of the pages to display in the navigation bar
 header_pages:
